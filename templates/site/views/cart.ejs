@@ -1,0 +1,216 @@
+<%- include('../partials/head' , { title: 'Turgut Salgın' }) %>
+    <%- include('../partials/header') %>
+
+        <div class=breadcrumbs>
+            <div class=container>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class=breadcrumbs-content>
+                            <h1 class=page-title>Cart</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <ul class=breadcrumb-nav>
+                            <li><a href=index.html><i class="lni lni-home"></i> Home</a></li>
+                            <li><a href=index.html>Shop</a></li>
+                            <li>Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="shopping-cart section">
+            <div class=container>
+                <div class=cart-list-head>
+
+                    <div class=cart-list-title>
+                        <div class=row>
+                            <div class="col-lg-1 col-md-1 col-12">
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-12">
+                                <p>Product Name</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>Quantity</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>Discount</p>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-12">
+                                <p>Remove</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=cart-single-list>
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <a href=product-details.html><img
+                                        data-pagespeed-high-res-src="assets/images/cart/x01.jpg.pagespeed.ic.M7WT4pqWxD.webp"
+                                        alt="#" data-pagespeed-url-hash=2416727865
+                                        src="data:image/webp;base64,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"
+                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
+                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-12">
+                                <h5 class=product-name><a href=product-details.html>
+                                        Canon EOS M50 Mirrorless Camera</a></h5>
+                                <p class=product-des>
+                                    <span><em>Type:</em> Mirrorless</span>
+                                    <span><em>Color:</em> Black</span>
+                                </p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <div class=count-input>
+                                    <select class=form-control>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>$910.00</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>$29.00</p>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-12">
+                                <a class=remove-item href="javascript:void(0)"><i class="lni lni-close"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=cart-single-list>
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <a href=product-details.html><img
+                                        data-pagespeed-high-res-src="assets/images/cart/x02.jpg.pagespeed.ic.Q4HkN1z2dt.webp"
+                                        alt="#" data-pagespeed-url-hash=2711227786
+                                        src="data:image/webp;base64,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"
+                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
+                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-12">
+                                <h5 class=product-name><a href=product-details.html>
+                                        Apple iPhone X 256 GB Space Gray</a></h5>
+                                <p class=product-des>
+                                    <span><em>Memory:</em> 256 GB</span>
+                                    <span><em>Color:</em> Space Gray</span>
+                                </p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <div class=count-input>
+                                    <select class=form-control>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>$1100.00</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>—</p>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-12">
+                                <a class=remove-item href="javascript:void(0)"><i class="lni lni-close"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=cart-single-list>
+                        <div class="row align-items-center">
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <a href=product-details.html><img
+                                        data-pagespeed-high-res-src="assets/images/cart/x03.jpg.pagespeed.ic.owHytZbPGn.webp"
+                                        alt="#" data-pagespeed-url-hash=3005727707
+                                        src="data:image/webp;base64,UklGRqwEAABXRUJQVlA4IKAEAACQLgCdASrcAMgAP3Gsz1u0riqlqhKL8pAuCWluhWBUy+uqMTIUs0RiGbdGy0DMsuuHJIbeNQ+hkr2nB0r9JRCdjvKx2ZLn9zLA2u20rTBZHyqGlO/FfFGCWFW7g6Ux6quMNdjY++IxscJxgmq721gsDz9voIGiocu4XtUxbUqng+oG8QhYKoFSxg9np6XCMk3n9CHE7WOa+rotpnXIXSea4T94C9n0OGlSAGgPUSxiNRH5Fdv+c6djbQpAqZzRNi/EJKZ42XA7tno7wgGXPBZTcYRAb8sbFf1YmZ2IBjl/xgbA5Gq8eVjhUSbiE9MKk3C0UBWORYH8wnLJqHxNU5wSmrchvhGq5Ab61qOHWgo0YON+cEODaSTWeV9YkIixcBSpuLZZAZ7GY8S7GlM2vsvGWXEAmuoXlxwu8N3suzJtVvnQPGRJ2jY6b4lNrAAQJW/Jk01IayLgoYRRSapYkgAk4RS9uqlzgC67vL0j5KsKnmPssV33yOL27025gvAA/u7mmvVESrvY2s1bgLuF20Md1XUTn7Z3GMCniWkukX4G0YwjSgQOZrABY2IDQ0wACmgB/HkC9zO+3q1SDsNuewlQ8q1nSWLNxdR9kBe70MBkpasZpkEnAtDn6LQMuGfJYM5XYhHLR+87tA9ksMv9+r6PDFqMMKif4PCjrQbl0IfzBkqKfsism55sg7hMOEnb4lbKABF1/Hwj8oUkbMKSizE6WTA9fy8gblZAcssyvy9VlnZnMcCK6OlFVG675Ev2dI3s6c4HZBIHHFwDkxaMvbqbVIJw3gfUaZTtgB34Z/kz05awqzq4at5lF1jWPYsnI9lPjr/6iG+GCDUytKcGR9JI489lhmgtOm4g4gpNigTCuvAjIjG87egmcyaOZazH00SiA3WDyzfBj7qBT2fGwZSmFaoeXSnhdqxA6S7NYrWSgqMf4ISewtfG5ouZMQba8Bqm2qyotT6XdETu3Ak2yR0fcE5J6gulyk+iO7PzkNNTqSwP+Ioa58qfOEl2ZtvTAWdh7BBAAZa1UKwReX6BgPRUQx3XK4GKP0G6dUHRIO1axZgXhMM70aBJVLy0KF6lJcZzimLraeKItJdTu6/WUmFxtO/FCbzcgxBxmLWRuB+uf1OnQFZm+FRLyYG5aB5hHZVOdCpR+It+qXGiyvOq55u4/zz+tmoqEzG5jLYR/wvnGmuxPjGIIG+s55J86SXi+GRlcYg8NdCYnR2fjt3D8XuIhxW1bye09ioBE3h9MYF2yN1OfKZRmiWcs9XEohvX6JvKpkrTBuo2CV+/cUsvhGr8LAgJ8FuCqPNIWY/xx36iBy9KFL8F6u72XXsNOoU5dytJkvzwZYIua+/yl+BqB+Cu+K5UIV3nLtUFQr3ZdztYqY+v+CP5bTZsItj8pmkHWn3cENcNCMVxGj/C5ho94gesJRorBWOC3vPIWJOpHk6bsZpYtbXfAip/68Ocb1XmLJnCN3z0efJ9QOnr4BJB5+kme5rRGu7cHve6/1Ljyhj1NdoGBCHBfnLrEGrIcTDSdFkGthazzaQFglgdPiMEKCSRLkS5gTbDUckL8MhaEMIAAA=="
+                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
+                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);"></a>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-12">
+                                <h5 class=product-name><a href=product-details.html>HP LaserJet Pro Laser Printer</a>
+                                </h5>
+                                <p class=product-des>
+                                    <span><em>Type:</em> Laser</span>
+                                    <span><em>Color:</em> White</span>
+                                </p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <div class=count-input>
+                                    <select class=form-control>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>$550.00</p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <p>—</p>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-12">
+                                <a class=remove-item href="javascript:void(0)"><i class="lni lni-close"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class=row>
+                    <div class=col-12>
+
+                        <div class=total-amount>
+                            <div class=row>
+                                <div class="col-lg-8 col-md-6 col-12">
+                                    <div class=left>
+                                        <div class=coupon>
+                                            <form action="#" target=_blank>
+                                                <input name=Coupon placeholder="Enter Your Coupon">
+                                                <div class=button>
+                                                    <button class=btn>Apply Coupon</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class=right>
+                                        <ul>
+                                            <li>Cart Subtotal<span>$2560.00</span></li>
+                                            <li>Shipping<span>Free</span></li>
+                                            <li>You Save<span>$29.00</span></li>
+                                            <li class=last>You Pay<span>$2531.00</span></li>
+                                        </ul>
+                                        <div class=button>
+                                            <a href=checkout.html class=btn>Checkout</a>
+                                            <a href=product-grids.html class="btn btn-alt">Continue shopping</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../partials/footer') %>

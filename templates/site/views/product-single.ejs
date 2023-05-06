@@ -1,0 +1,375 @@
+<%- include('../partials/head' , { title: 'Turgut Salgın' }) %>
+    <%- include('../partials/header') %>
+
+        <div class=breadcrumbs>
+            <div class=container>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class=breadcrumbs-content>
+                            <h1 class=page-title>Single Product</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <ul class=breadcrumb-nav>
+                            <li><a href=index.html><i class="lni lni-home"></i> Home</a></li>
+                            <li><a href=index.html>Shop</a></li>
+                            <li>Single Product</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="item-details section">
+            <div class=container>
+                <div class=top-area>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class=product-images>
+                                <main id=gallery>
+                                    <div class=main-img>
+                                        <img data-pagespeed-high-res-src="assets/images/product-details/x01.jpg.pagespeed.ic.dzfilwUWdG.webp"
+                                            id=current alt="#"
+                                            src="data:image/webp;base64,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"
+                                            onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
+                                    </div>
+                                    <div class=images>
+                                        <img data-pagespeed-high-res-src="assets/images/product-details/x01.jpg.pagespeed.ic.dzfilwUWdG.webp"
+                                            class=img alt="#"
+                                            src="data:image/webp;base64,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"
+                                            onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
+                                        <img data-pagespeed-lazy-src="assets/images/product-details/x02.jpg.pagespeed.ic.DfOtEWLJTK.webp"
+                                            class=img alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <img data-pagespeed-lazy-src="assets/images/product-details/x03.jpg.pagespeed.ic.34ELmg8Ko8.webp"
+                                            class=img alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <img data-pagespeed-lazy-src="assets/images/product-details/x04.jpg.pagespeed.ic.xTI-mpWzZ4.webp"
+                                            class=img alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <img data-pagespeed-lazy-src="assets/images/product-details/x05.jpg.pagespeed.ic.4akyUDrzmC.webp"
+                                            class=img alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class=product-info>
+                                <h2 class=title>GoPro Karma Camera Drone</h2>
+                                <p class=category><i class="lni lni-tag"></i> Drones:<a href="javascript:void(0)">Action
+                                        cameras</a></p>
+                                <h3 class=price>$850<span>$945</span></h3>
+                                <p class=info-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod
+                                    tempor incididunt
+                                    ut labore et dolore magna aliqua.</p>
+                                <div class=row>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="form-group color-option">
+                                            <label class=title-label for=size>Choose color</label>
+                                            <div class="single-checkbox checkbox-style-1">
+                                                <input type=checkbox id=checkbox-1 checked>
+                                                <label for=checkbox-1><span></span></label>
+                                            </div>
+                                            <div class="single-checkbox checkbox-style-2">
+                                                <input type=checkbox id=checkbox-2>
+                                                <label for=checkbox-2><span></span></label>
+                                            </div>
+                                            <div class="single-checkbox checkbox-style-3">
+                                                <input type=checkbox id=checkbox-3>
+                                                <label for=checkbox-3><span></span></label>
+                                            </div>
+                                            <div class="single-checkbox checkbox-style-4">
+                                                <input type=checkbox id=checkbox-4>
+                                                <label for=checkbox-4><span></span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class=form-group>
+                                            <label for=color>Battery capacity</label>
+                                            <select class=form-control id=color>
+                                                <option>5100 mAh</option>
+                                                <option>6200 mAh</option>
+                                                <option>8000 mAh</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="form-group quantity">
+                                            <label for=color>Quantity</label>
+                                            <select class=form-control>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=bottom-content>
+                                    <div class="row align-items-end">
+                                        <div class="col-lg-4 col-md-4 col-12">
+                                            <div class="button cart-button">
+                                                <button class=btn style="width: 100%;">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-12">
+                                            <div class=wish-button>
+                                                <button class=btn><i class="lni lni-reload"></i> Compare</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-12">
+                                            <div class=wish-button>
+                                                <button class=btn><i class="lni lni-heart"></i> To Wishlist</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=product-details-info>
+                    <div class=single-block>
+                        <div class=row>
+                            <div class="col-lg-6 col-12">
+                                <div class="info-body custom-responsive-margin">
+                                    <h4>Details</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                                    </p>
+                                    <h4>Features</h4>
+                                    <ul class=features>
+                                        <li>Capture 4K30 Video and 12MP Photos</li>
+                                        <li>Game-Style Controller with Touchscreen</li>
+                                        <li>View Live Camera Feed</li>
+                                        <li>Full Control of HERO6 Black</li>
+                                        <li>Use App for Dedicated Camera Operation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class=info-body>
+                                    <h4>Specifications</h4>
+                                    <ul class=normal-list>
+                                        <li><span>Weight:</span> 35.5oz (1006g)</li>
+                                        <li><span>Maximum Speed:</span> 35 mph (15 m/s)</li>
+                                        <li><span>Maximum Distance:</span> Up to 9,840ft (3,000m)</li>
+                                        <li><span>Operating Frequency:</span> 2.4GHz</li>
+                                        <li><span>Manufacturer:</span> GoPro, USA</li>
+                                    </ul>
+                                    <h4>Shipping Options:</h4>
+                                    <ul class=normal-list>
+                                        <li><span>Courier:</span> 2 - 4 days, $22.50</li>
+                                        <li><span>Local Shipping:</span> up to one week, $10.00</li>
+                                        <li><span>UPS Ground Shipping:</span> 4 - 6 days, $18.00</li>
+                                        <li><span>Unishop Global Export:</span> 3 - 4 days, $25.00</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=row>
+                        <div class="col-lg-4 col-12">
+                            <div class="single-block give-review">
+                                <h4>4.5 (Overall)</h4>
+                                <ul>
+                                    <li>
+                                        <span>5 stars - 38</span>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                    </li>
+                                    <li>
+                                        <span>4 stars - 10</span>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star"></i>
+                                    </li>
+                                    <li>
+                                        <span>3 stars - 3</span>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                    </li>
+                                    <li>
+                                        <span>2 stars - 1</span>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                    </li>
+                                    <li>
+                                        <span>1 star - 0</span>
+                                        <i class="lni lni-star-filled"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                        <i class="lni lni-star"></i>
+                                    </li>
+                                </ul>
+
+                                <button type=button class="btn review-btn" data-bs-toggle=modal
+                                    data-bs-target="#exampleModal">
+                                    Leave a Review
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <div class=single-block>
+                                <div class=reviews>
+                                    <h4 class=title>Latest Reviews</h4>
+
+                                    <div class=single-review>
+                                        <img data-pagespeed-lazy-src="assets/images/blog/xcomment1.jpg.pagespeed.ic.nTUzOhBqKr.webp"
+                                            alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <div class=review-info>
+                                            <h4>Awesome quality for the price
+                                                <span>Jacob Hammond
+                                                </span>
+                                            </h4>
+                                            <ul class=stars>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                            </ul>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor...</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class=single-review>
+                                        <img data-pagespeed-lazy-src="assets/images/blog/xcomment2.jpg.pagespeed.ic.j3fObWuXzs.webp"
+                                            alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <div class=review-info>
+                                            <h4>My husband love his new...
+                                                <span>Alex Jaza
+                                                </span>
+                                            </h4>
+                                            <ul class=stars>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star"></i></li>
+                                            </ul>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor...</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class=single-review>
+                                        <img data-pagespeed-lazy-src="assets/images/blog/xcomment3.jpg.pagespeed.ic.-bSrbhJC3m.webp"
+                                            alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
+                                            onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
+                                            onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+                                        <div class=review-info>
+                                            <h4>I love the built quality...
+                                                <span>Jacob Hammond
+                                                </span>
+                                            </h4>
+                                            <ul class=stars>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                                <li><i class="lni lni-star-filled"></i></li>
+                                            </ul>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor...</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="modal fade review-modal" id=exampleModal tabindex=-1 aria-labelledby=exampleModalLabel
+            aria-hidden=true>
+            <div class=modal-dialog>
+                <div class=modal-content>
+                    <div class=modal-header>
+                        <h5 class=modal-title id=exampleModalLabel>Leave a Review</h5>
+                        <button type=button class=btn-close data-bs-dismiss=modal aria-label=Close></button>
+                    </div>
+                    <div class=modal-body>
+                        <div class=row>
+                            <div class=col-sm-6>
+                                <div class=form-group>
+                                    <label for=review-name>Your Name</label>
+                                    <input class=form-control type=text id=review-name required>
+                                </div>
+                            </div>
+                            <div class=col-sm-6>
+                                <div class=form-group>
+                                    <label for=review-email>Your Email</label>
+                                    <input class=form-control type=email id=review-email required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class=col-sm-6>
+                                <div class=form-group>
+                                    <label for=review-subject>Subject</label>
+                                    <input class=form-control type=text id=review-subject required>
+                                </div>
+                            </div>
+                            <div class=col-sm-6>
+                                <div class=form-group>
+                                    <label for=review-rating>Rating</label>
+                                    <select class=form-control id=review-rating>
+                                        <option>5 Stars</option>
+                                        <option>4 Stars</option>
+                                        <option>3 Stars</option>
+                                        <option>2 Stars</option>
+                                        <option>1 Star</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=form-group>
+                            <label for=review-message>Review</label>
+                            <textarea class=form-control id=review-message rows=8 required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer button">
+                        <button type=button class=btn>Submit Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../partials/footer') %>
