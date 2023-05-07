@@ -37,6 +37,6 @@ User.hasMany(Cart)
 
 Order.belongsTo(User)
 Cart.belongsTo(User)
-// sequelize.sync()
+sequelize.sync()
 
 module.exports = User

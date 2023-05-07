@@ -4,6 +4,7 @@ const router = new express.Router()
 const User = require('../models/user')
 const Product = require('../models/product')
 const category = require('../models/category')
+const Seller = require('../models/seller')
 
 router.get('/', (req,res) => {
     res.render('site/views/index')
