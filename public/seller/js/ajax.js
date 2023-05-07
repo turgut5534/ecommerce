@@ -83,3 +83,50 @@ $('#seller-login-form').on('submit', function(e) {
     })
     
 })
+
+$('body').on('click', '.delete-data', function(e) {
+
+    e.preventDefault()
+
+    const data = $(this).data('data')
+    const title = $(this).data('title')
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: title+ " will be deleted",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+
+            const target = $(this).data('href')
+            const id = $(this).data('id')
+
+            $.ajax({
+                type: 'DELETE',
+                url: target,
+                success: function(response) {
+
+                    $('.'+data + '-' + id).remove()
+
+                    iziToast.success({
+                        title: 'Ok',
+                        message: title + ' has been deleted successfully!',
+                    });
+                },
+                error: function(e) {
+                    iziToast.error({
+                        title: 'Error',
+                        message: 'An error occured deleting the data',
+                    });
+                }
+            })
+
+        }
+      })
+    
+})
