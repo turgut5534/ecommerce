@@ -5,6 +5,8 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const auth = require('../middlewares/sellerAuth')
 
+const productRouter = require('./seller/product')
+
 router.get('/dashboard', auth, async(req,res) => {
 
     try {
@@ -139,5 +141,7 @@ router.get('/logout', (req,res) => {
 
     res.redirect('/seller/login')
 })
+
+router.use('/products', productRouter)
 
 module.exports = router
