@@ -5,6 +5,7 @@ const Cart = require('./cart')
 const orderItem = require('./orderItem')
 const ProductCategory = require('./productCategory')
 const ProductSeller = require('./productSeller')
+const Review = require('./reviews')
 
 const Product = sequelize.define('product', {
     name: {
@@ -40,10 +41,12 @@ Product.hasMany(orderItem)
 Product.hasMany(Cart)
 Product.hasMany(ProductCategory)
 Product.hasMany(ProductSeller)
+Product.hasMany(Review)
 
 orderItem.belongsTo(Product)
 Cart.belongsTo(Product)
 ProductCategory.belongsTo(Product)
 ProductSeller.belongsTo(Product)
+Review.belongsTo(Product)
 
 module.exports = Product
