@@ -7,6 +7,7 @@ const category = require('../models/category')
 const Seller = require('../models/seller')
 const Brand = require('../models/brand')
 const Review = require('../models/reviews')
+const Feature = require('../models/feature')
 
 router.get('/', (req,res) => {
     res.render('site/views/index')
