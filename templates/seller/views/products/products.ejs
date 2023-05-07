@@ -21,17 +21,10 @@
                                     </ol>
                                     <div class="carousel-inner">
 
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="/products/<%= product.product.image %>" alt="<%= product.product.name %>" />
-                                            <div class="carousel-caption d-none d-md-block">
-                                                <h3><%= product.product.name %></h3>
-                                                <p><%= product.product.description %>
-                                                </p>
-                                            </div>
-                                        </div>
-
+      
+                                        <% let first = true %>
                                         <% product.product.product_files.forEach((file) => { %>
-                                        <div class="carousel-item">
+                                            <div class="carousel-item <%= first ? 'active' : '' %>">
                                             <img class="d-block w-100" src="/products/<%= file.filename %>" alt="<%= file.filename %>" />
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h3><%= product.product.name %></h3>
@@ -39,6 +32,7 @@
                                                 </p>
                                             </div>
                                         </div>
+                                        <% first = false %>
                                         <% }) %>
 
                                     </div>

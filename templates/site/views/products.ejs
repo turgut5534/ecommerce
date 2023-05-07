@@ -198,24 +198,27 @@
                                 <div class="tab-pane fade show active" id=nav-grid role=tabpanel
                                     aria-labelledby=nav-grid-tab>
                                     <div class=row>
+
+                                        <% if (products.length) { %>
+                                            <% products.forEach((product) => { %>
                                         <div class="col-lg-4 col-md-6 col-12">
 
                                             <div class=single-product>
                                                 <div class=product-image>
-                                                    <img data-pagespeed-high-res-src="assets/images/products/xproduct-1.jpg.pagespeed.ic.hrhh8W8XuW.webp"
+                                                    <img data-pagespeed-high-res-src="/products/<%= product.image  %>"
                                                         alt="#"
                                                         src="data:image/webp;base64,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"
                                                         onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
                                                         onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
                                                     <div class=button>
-                                                        <a href=product-details.html class=btn><i
+                                                        <a href="/<%= product.slug %>" class=btn><i
                                                                 class="lni lni-cart"></i> Add to Cart</a>
                                                     </div>
                                                 </div>
                                                 <div class=product-info>
                                                     <span class=category>Watches</span>
                                                     <h4 class=title>
-                                                        <a href=product-grids.html>Xiaomi Mi Band 5</a>
+                                                        <a href="/<%= product.slug %>"><%= product.name %></a>
                                                     </h4>
                                                     <ul class=review>
                                                         <li><i class="lni lni-star-filled"></i></li>
@@ -226,286 +229,15 @@
                                                         <li><span>4.0 Review(s)</span></li>
                                                     </ul>
                                                     <div class=price>
-                                                        <span>$199.00</span>
+                                                        <span>$<%= product.price %></span>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
+                                        </div>  
+                                            <% }) %>
+                                        <% } %>
 
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-high-res-src="assets/images/products/xproduct-2.jpg.pagespeed.ic.a9zQzFgLCS.webp"
-                                                        alt="#"
-                                                        src="data:image/webp;base64,UklGRgAcAABXRUJQVlA4IPQbAADwvQCdASpYAlgCP3G40GK0sDUxI9w4wqAuCWlu9IR/hP/+3/pPhG+efa8yfJJ/8bN3sL/qv//kOcoUjb6JFLp3VutyBfO60/2n9F/7+y1cT+58Ev8t/wM9v/938/w3/5w/+zx6//+8hdOe/LaG/Mw/A9Et//eFd//hFfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqz9Wfqy2lP5pKes11qXvmrS0tLS0q+u1NWt+79aZ7TPaZ7TPaZ7ONHEpppAIrkQT4Jy9+vAqktxTL+ZfzL+ZfzL+Zvjv5QX8wjBBMF3svqOJcJiz9Wfqz9Wfqz9UpIRec0Hw0QJDPXeDg4OC94ODg4OC8/Hd8bPl4ZbQzaGbQzaGbQy99cYnjE8YiUR1jJEKme0z2me0z2mezitCk9Ww9pntM9HCoQf/qz9Wfqz9Wfqy5zjgDdUlgz2mAgDgDlSWJL7yAbYSdJmvcvuMX2LWoIpUTdlp9SNXUcOMJ2yUTDXvZMMG5/TPaZ7TPaZ7TPZvVPbLvkN+M/HU9nmvLXcm6eDOlkydDa2dIHZjhfGIddnSPhp+oOtP9ZkP1zxDXy+rvmkr44RZqY4GsIxPGJ4xPGJ4vDuzVhDS5nex3+CzKdp72c1B2D/eI7ECsZ3s9Ircd8/rEwK2LPKvqO6JOhAZ/JywhJEogkTxieMTxieMTwoXan+wBBymNaoCVZEdWjU/bJbS4VIQm3WtNvHBjIHEhmqHeaMOmoBOt9ZqkxEnS4IY7MvdjRQubUB5tNReZbvFAPJ9j/5pHUmX8y/mX8y/mX8wQsJZ5MZe7XWWybhAAWIiuXcvH6fUZ7guHdL3/evyt5qnZRE/aJEHTIml3uHB5JyBIA7sPv+yCTjfK9iiMJ7N/fmX8y/mX8y/hy+01LrpgygHNUo+iV22SkcIGQSvxkL1Gsgu5JQ7KdlyLTRLlaGN1Xlpq6D/EWlO3bLI+KPbwe4UhPQUWTxnjqGxqzbTPaZ7TPaZ7TPSSuJWKYnylx14WcGi+YadCiNf8G22QfBd/EN8i/AlIhQAoZnynR3Y3vNHCMf9+ZfzL+ZfzL+YHs3J4rCPgsxO+LIEk2pgQZVylD7Vw920InQ6hsGXBtbMImpKN5ZHpoALV0g+/mX8y/mX8y/mX0/9wonqVTGB8GLpfKZw5OoiFyOkUe0dXdwRndCMl49anwJ4yGe9fTAWMapiHypeMTxieMTxieMTlT4ILduxomH2l9XNKqO0fvv16VdP9y/yQ1na0vCEfDztFd0mJW/vNIcMAdIZWEHRv+r6s/Vn6s/Vn6s/PqEJpILjfmW/PKzgaWX9DOL024D5D0j2pK290NQ7PZjd76gA33hTBcREYiQ7tzNcAIpPGL/vzL+ZfzL+ZfzBCLU8KwgvkAsUEMGu5FfPfpDev0/g8CPw2Zk7/Q1cFWrKUZ1T+EkblsCpBQzaGbQzaGbQzZ7xklVQ3T+D0vpDq3Q/64Vdgp+1sHC+Kg4hKxyt8nZwDYvVAK8D5mHM+Tawr/4S/Mv5l/Mv5l/MvqCylk9XQD6p62Dnn5+fn5+fmQBRcp47nplEriDy7UPCExs/oqBfzL+ZfzL+ZfzLNJl/NEgPvw1Sfc2w9pntM9pntM9HPXAnJf4A4Zb6EeI+ZZ5TL+ZfzL+ZfzLIPNbAp4o4xZt6DAuKDAwMC4aW5iUzbh4/+iWBEGCUPaZ7TPaZ7TPaZ6aZOenTgROHo5+hZ5VYg8opslrk+1/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/Mv5l/MrwAAP7+WQAAAAAAAAAAX7gasNq0/edZvs+/B0ERKCrVYA0VKiADxvMg0zs7my3ndsGP8KpMY0+BpYe1YQGmKyFDUpnRachdt/ZN6A16zIdmAAMHDUOiU+fbVGqfsFSWoB5GNkIG7d0+x0tOFEjVYMb/rDsysZr3q7CSXws4lg+MXGwkJQv69mNwAj7sDMZXSYJbPJfMN0yYZV1bDmZGgGQc9sNxHXW98lFAwV0FhVM7Qdnqkpgkx5K/XshF4MSSWKdHaFU3M1upprZ3qXhsgR9K8VJvT3OP3dAzhATfgL7uFoaDcsup+RTnNj8Gu5eeNhAuTfP+kUpWDHVxlEpeSl5ryRo7mD6FcbgEHYmWd8QsCi+Yas0T42ihFWfeEeHljJI8mG3LQhLIgcp34/BU8NbE3nt3IbkBuXYe6I9IuuYJ3aYBVkQZQOynFmlTYGO9/8H9M8I9tVmd4ooS07T4llCRVDVh8V+JvsF8QVQ3D4xJAAtv0zaVml6tbH0wzt2GoVSLBc81yWrWmZA0u20hYGqUEtrvc9ataBQPctr4n3UbmmvGWEo+ETJwcT7vpSY1hk9+4rDLAezJz5IzTkpFE8DSJYSrhVRiQ4JKvp4nt1RaYjOaNVgM93QkuGBUm4/EOb5PFch3aVgQC9N5HlReh8KcPLaJJ0u9g/k1PsMRvJHWL/hPGCbfx6FzCB8DnGvUW56vullFTvwJVsWls/y5l5qunpS3eIygCtryx5pQYE55ZR2RQ6tbUYRLrUE/pF/RC2MmPuYWg1RJMlGjq8WeIlSw/PfyM1CJ5RwbHWDagHZ1DrztuoTPh0PqaaN+euiB3HzgM9TA7LtZpQsTvZcjHOA1NZPBMVex6V5qr6GQ5J2o8FaavxBqWn3pTeskjHpaHrfNSif18FLNJmoAmQHxRdANE2wQxNyDuZvYpi8t69Z7BJIssw2Y1MVatddES+My8YL4sRE3Fg1VlqNXMM1SnmdyuNMbxLWoSGBQXjrLbF4ydXpsMyqQr6HW9hxhmwh1te9DiR9KdEx0fBSOmU+3F73Izg8yr5CJ1+WIG1J5V0QjVlmIjTjZy2Bg5gHxJiLNV31R5KEmjIMElVIKVujfQF4FbzZkq06g8GfW7HkllItPSd2HneV7Hd6xXIHMrFFOLpwcmf3O2dGTAi4FDA8c5F5gcTZ6awa/5B3+2y2XlI8AegyBFzIDj17MX6iXDz+weqe8n5SQmqHItseEvXgKgkpvsXNMTsVwLnEtl5SvNbN/2vAuO8FgCgZS02pNxMzuxmX7LRqRpdxIoJ1NgDUHA+ezRKW0gKilY7q/GzoC2fYgY+pHmdHZrX0Iyf+um2p3M+vWClsoRu20D9GhM11t+18ft95Fv2p5zxBS1/z/4O6J1KUuiMvw08QBm95I0Q6kkReflDk7lRAhPiyiq9EoqfGDTp1IpCJfsf1kCODKq8YJT4wxdHMb0wg9K8judeX3KOtHN3nbzTQzk1GaY41ypU8r37Kqd2CQPA+Hx/ExY/7FBD4483TphoDVC2QcRzfcfVHQ8v+FVGwKVYqc35ew+DkrxhjLzN15sZDiIYqTq37Aoq8YhPx7K9odYNd0+PHrrpfBboKEDhD0YdE0sQvfn5ew+xUVdkRLqjXVL7gMkcNkKyLt6msANxXKZcfr5f1ensPJ3QShU3ZfNspEQ2dQgMqu2QyKo5cjHQcRan3IMEe+9P/yFbSMGtS9Dv0OEXaV6fBVBJJovU6DJFxaBHtuzaFMBrBIFDirkfqd2K5uKgJAfii+qkZ2L3wMEe+k4YEf6lk7kKwNSzoK1vWm3GW9AqhVtyZQ1u1FrQjo8ZhosssfkV5GUP4XoJlYMCsIwXoEX4Le4zRR+tkCA4xRvat+R13v9WjxMDt4RWvhGmcs/2YANQYr8iIUsV3c81dnCZDX816ZunuUy/OuNp5XWEhBcrrOdr7qZnNTIyiHKipOLimliC5NTRuMH27WVRiZEKzf58VHU1DkWuwsPFsNA19s4/bWZ4wldf+82RjNBG27M4WViH5YtqLAv4HG/mjRQx9Rc6x8TBPps9ka3zernC7IvSfkNSXDTYVe9u3TXRoskcsNODc6+wLq8C2Pa7CrwEbDr7/RfA2B0hCOCthY7NlQZzxADfcvfzKgqSeqZJQ0i+sWLDqI0BhLNCVYnbmnI0Y198vbr+v+aGhYYYOBf0fMAy8+nTkNmFCAkUgR88fQrcUziseLgQCj5dFrvgosuhfbaN/1bP9XbHHljJW+7nkgSUcaMsBvsK0QaYvPnhsNbeLxjOratJsrlVYaJ00+RBL2mtTeChPCJIO4sEDTrWzz0MSYo52a7OxqEheGD6VhTVR4/8wZyT315iJyFiR6HMeTmKndeeVYpI8/BZODf52QvsYaxE9yqVo/dJU+Pm9ofV0MVZzRmLlJDP4ITDEFuWK3CfkhSvj0FJhujkV75qbZMrqhYf9mKgTOzVmAbTj89wB8g3to9M7IoEfFg5SHzmOeR6yveQbRaXzAd4F+DRbLjloNA9axHQGouXgl7z2Ww+WMJ7hCiDlH5NGp+errsEzlH7lVeS0JdoFcxtBmr5DCnlcp4+htI1GiuB7anoLFRuQ8JNeRJ0xLhBm8Hl3kG0XId8KLDDD8wiKNzZBM4Zocav8LM5qipxsU2JcI3A/tAvStdSf+ZQuIxlYOtPWFep/+FxL6txnrG9ZDSkPEvRw7zyf9J6joPcNAS7qy7ECDJ2Js2H0nKrLfNk7Kv+aWIWTG9kTtYbCbaxQgCC6l9Q8neqgW2UeaRhnFCW3AjIujeAF9ZeFZ6gdiBl8cqVJMRpUKYhISRySFNsjx1oVXV4XzNNaJaYpaH+wNNnZii5JTk3AerlUGKJv7nv2RhcqP8p/8IVh1ijRN15IpdPAvnIyaBTACZi9OZApB/nNObzU0tIcEYbpvf660lkwfrO/2gtBZWzZlF7fDMelHm8J2h766qU5K7vMtkGYLaiIZRxhIfBm7U4z9QVVUmBBqXjEiJkRG+vI3YzAI+Lv4DEglaVCHYE5BqYxdGBT08DRjwSL/NdiPpte7rhNpgsi0D+oYTmH4+ZgIH8vAg8T9zROMiKPQN54QhgO9fa75SZn0q8mnOzvuO4Cj0ykrdk4N4IzkfEqkZuVV/OMVRDrGJJiT7lmzzxzgR3ETTgbwkAUq3vc7fWf3orMmR1X9eonu7FzoFrXZorMh+nSAoUT5XH6H5IuX1LPC8SKFAL7y97nrIynjWKwfZI7DP2cEB2vVqJgoWGwSy3xYAqeEJ3Z7YAe9qimLaIu3iY+TpTi83PROSpPmJvpjOnHt/72xu40GcFbOOElzo8EX0+o5RBl/v5QnHNVutu7g9zKDXE1Rbs+rxXYv5ENiu+MtcA3SlusVvDKHdIkPqR+jsWDD90S3gpY8SShORPu+sQKBwo3Qqltsq3kel9C5L6KQLQfgyQbbgWuZhdYR3LhdYmG/ogZUsaQHXinrotXt+noDzig5LKsZig6gxrZqpQ/K7R+jUOrPagz4BEKw6PgcZDoSaiZP2vxLUMzQ8xgYxkuaam8skCyHjQafqpcd0CgiWK+bWhAAnynGXXYtW85jQunAx+zJvQ/4IYlLx4oIrMxCFh2q0eneU0OuSY3lDdZ3m6aH2oVEZT1X4yQjaEt4KSpjwjZkS7aZgBbIi+7jGEZTnTFgup7u4mOONOEHal7DyNmRq93YHBh5POfC0EG2N1K/96fdnSegoa5RCxrva1lnI8BfvrL1hd1ZIwUx4JSwM6rA+a6yGRSf88wmRKWXR66ciOEn4K/WhslRYCKH82T5GbOIJ56Gs7sfsQNcjI2sOGOCq3eTb02HnhJ9NBSKWHb7oxqXqjkIu7hx5gSWc0wo+qYbJMh5lqV3Zu/cgfAMKQQQ36jWNYlFEpVJaCLm4tSIfKNGUcSKNFvsRbW/l7iS/OC2ESqmGFPcvsIK7IEITEuuaWp3+bw/ph8K27iSpU3ID1VXDhkgYDctY04Q06/ZijyAhbe/tGbI2vm9WQ2wA1zZoXtaAyLu1akSOy/aBF5PnOhlhrQjXEW5b6Jc0HEGNGLw2/ZzrOS2fjVZJJsMQCp0BHEEU1KbTaCrmetdz+u9mIXfyEa2f45w5OXDfVWXAXzg6mn7rxbUChlPLGQRhSVvTWWDsW6dRQ+hcV5cxA+E3GF9Vdiz4tU5D1tPnjczhuNFXb9CekarpDBW7zeOQqNy2mVN5ZZPugm5B7zjJ1otQQuLVO2eUmgCep15Jsy+7NEGI8xHUCvrVpg9py/I+FdkJ2oeXdLEJZE3p4ivdfmdgaG38lXpBCfKNzMxfYZb5DeHNxa8/X65nHnU1F9okoT3XYd90xxG1lASFWmm5/ONWDDcRgUxHWEnJ2BM8KJgdxdC5uyPA1GvKmX1b2ghMjYUxTEN8yTANU5P/7kTJEyikBkH3b7XcecKNmg4wIjP5r1p1mYu6Cwk5D2IpNVg+W6zCjOoGZPCUCtwDPl0YaTUkKy6lqPaGRIDAMQLofyFTFcrQ6DrjoqKlSOByQrDQ5ji03FGPMVfhyuncKtA7ggHk3vQdz7Sik2Q9conST0kVz2JrAtSh0Iber6LOh5xWnud0hff2u6okF+GT2vkfpD9iV3IS6YRCRm5ogJq5F8RxOCpVwJFV57dnzSoi52TDRqG4gzptQekoEDpCo0gZ4c0I1tdWOFUUmEgdNFQpgZvH7Zk7k3LPhf2zbw7SV7OFUOTYWPjY7l5SkMiPC5daHygUVeVqNs8qnhVDjzON4IEA/LxDv7odRL3CvEGBx6spU7O71cGtOKaAgH5fiA7Eg/6NlYJbTtlnlLAWCuakQTnKcoA90TxS/wMcJ/EcORBrMidelTpdcaoK1U8wLgX0iLdEU4apeh9VFhA0ffph32rhm9oeEGTJVQEUCY1mIAWL4tRgzpBTlkg1V7p9IUhxcPe0/ocwGclMnVAJn09Qh3YDD6FlkI8IyHyH7PLc8i6Jpfcf8H8tv8NNel1Kx7d4GlfzYChop3QbSy5F5ZAkxTSHAes9wLnjxjE8UCoVpIEq8lvcu3kCulvGSw6ol6wslz/74oCKFu5rvX5fhhXUUwQ0dUEIT6rL2Cn1SIB5lftQ5ULXiLX7oba4Mk+1sbhXfku2YSATEKLpjwFa+iKASOSwqJShCMnMoJinkQQNeE+rE7QVWfhwrTdPhAiKDbvv1ACyCyMd8fiJzaVspRuvo3drhFBa61dDEuv7HfydPX0AST8ZwnA/l30Bak0sR/gYkXy1dNxXVDx7TFdM98IIcr6M3LRaOd1GJYmnxAe5D0aHrGdeI1005r0dplasRa71++jpDeRy71ZybAURhzF21PolsmeYznPAxwo6h/Wur/lLHrioR35E2l6qnIo3CC0powwWPaDcirHDaVqrHdDSvEzhYemk/4AlsSRy6+qI76XlcnCX/jatsswqVv5fYS+I7L2GdTzTfuXFgwqXcXJIs09Xh3CNyO4KcmuCgwVXnErNVeBETXxLjlfwinNicn/euLAVN0FEJ05tfoA16Jqn0Lmt2OaLvBmW52Qw7WdPhDw2yKj68Ap9zHupqmehyBnPAP5LTO8xUSdzZdrWBp5WHBJuCa8vdkQ8R+vR5gIzUOA2Teh60P69xd7juxB3IVdkXlb1KQuLKXlscDKwFt+IOT6Y6LZ9X0T37PyYP0Zn2oaFN7ObWKjPNRTLsTfZnnGpIX7/bEtGi4lSayQgbjz3TmxxiQgq07UxgNfM/7Ofy3djnq9O3OxnXN6gpFyPY9WY1vlpQ+PjXaxG0k8UpGuhfU5MIA6U0j1LMEcsg9pusdexl+wO3WalipiiVcxbp8VxjhbY4FmiNRe8L1j2r68Dna6aYauQZ5lw1KJOyeUKiyl5FGwrkRasLX+jwzjASM05f3OQKIlI5Vx0vWAP5PXAp8FMWmEBxiG/PZj69a84uuZ361Pezx7SrlLcen9Cx/WjsIT6bwusCH1/ptgUCuotO7989OoJqlIXILYLiOuDlZ38WQqErxZ3COeM9Dta+7/mbqNNtlgTBFy6h9U0DW5vnDZ9661XA2ssN8/Z3bDqrHLZS+QKnjacp5OMab7ZuKANnHjj4RdybwWuhn2ZMarGBUZx8QRRgQQMXvYK03hL/Set2TdftK3WA5ybGGhNvUgOiyTERuz2j7Rg3gaHlIRGJ/4PikjC5wwzihQWU1/Jik1qkUWRdw7hQo/ke+SEda0Vt+iQDi5G/osmHNdddM/OCC56r1RV8/dhuRi/mT2D3y5RRmONiaQMZGh3aFDFEtflvObR9+s13frOsOIkruAy7yUJUuu8JI8DEMQNDbRyzu+VP4Z2TnQ17PTgwRwmNk9UG8YUtbCcZH4q5FrMr46puZ/dDaHzaPz3744BE3EwJsgWzJG+i8QKJC9YA59/ciYami1cMvT/9W0+F1Qp7MEWwBqqfcnH5Jf57DXIsh+2tkO4Q2CmxQ3y4Ldx3uZx1kM/Mo9/UoFyNkdqZSCiBmIoLm59K1Lw6/lFaYf9UMehp5LFl70A43HyDRTzk7JwGIo/pMLdNpCYpMRD2YYUKXiQpQ8m+uKI8VOW55zSgIVvpQdgkHBkEh1Y0V011ezU7JvxaKoMfpJrlFNRK5HDDRx3k36nRpYxeaOvLyEuYLc7pKjv3PC7XJxrWYedD83ckYQrzwAQEKIbEHJmCEfZ6wMkWw3rnwzeuutl7m9VuoZbFSJ9o4KPag9u9dN5K63o9XsLSuqzbzNKeV2wubzDjT/L9FMcL0zKQSb46zKZJdve8jwHTYhYiAqZ4ibEmrcAbxDwuDVOHujdiZL8w+4op0EkUd144dMxX8v21hjZgxqKVtTr9GG5/BtSjMsNFzvYqDRL0Y7rU2JpEuc+KiYShAKlMKcRd0vaa0K10Ivs46GGqfD1YUoVDiK6y8spWLr3C8Ap9fnmq4a271jYBOjwqALt5+pclrjAHhWKgZeTPTNK8nmggv1L+7KJKcJHbStP+VIO6L5j40WOMbcC91gGEstb0z7SgTzooVOVbBOKlKG0mlz6eGX/97JnvekopXyB6qnZ5Ws5C5GLTdo1j362wjv+9FX1ACNkumFdG0Lsn88UDDXjopZPA/D+rmrWAUDjHs6tTRtlCo+YtDl3eMBJVIxBdHU7LKTmHcopDWbFHt+AAIrjqvzxAr6K+QqLZ10sDSD9gcgOnEEDwseXY/V0M6vtCbJJiKA+O55gI1wKpNVv88DiyDABB5WzWbVIH1J3QIlzucr0K6dadnLzLRyvOm52K3jwTiAnoYCEKDT3QpyzGyMKrX6t2dMBX81el0r6wJTeFQFDfeWiti7vVKWrV5koKI/Iw0+X1jh0T2IqqXDo2zQmKOV4SgHsbWexn9qRmHABlWYAWZHz77epX98IIiiyJLnAH/63cvI1OrCvnFlG7geh/9/kZW/YmoA9/7BomcE7HBVbNsnKyRtDcBAqk1XCJYscrIzptzCGiwH5dRIRAwcLOAvIAAisb15gs2rIAKIBifrAAAAAAAAAAAA"
-                                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
-                                                    <span class=sale-tag>-25%</span>
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Speaker</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Bluetooth Speaker</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$275.00</span>
-                                                        <span class=discount-price>$300.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-high-res-src="assets/images/products/xproduct-3.jpg.pagespeed.ic.5IpVmWTKes.webp"
-                                                        alt="#"
-                                                        src="data:image/webp;base64,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"
-                                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Camera</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>WiFi Security Camera</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$399.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-lazy-src="assets/images/products/xproduct-4.jpg.pagespeed.ic.SctVdoQQM7.webp"
-                                                        alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
-                                                        onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
-                                                    <span class=new-tag>New</span>
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Phones</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>iphone 6x plus</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$400.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-lazy-src="assets/images/products/xproduct-5.jpg.pagespeed.ic.Gsv1F53KuL.webp"
-                                                        alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
-                                                        onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Headphones</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Wireless Headphones</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$350.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-lazy-src="assets/images/products/xproduct-6.jpg.pagespeed.ic.g9MNdQ-HMR.webp"
-                                                        alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
-                                                        onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Speaker</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Mini Bluetooth Speaker</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star"></i></li>
-                                                        <li><span>4.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$70.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-lazy-src="assets/images/products/xproduct-7.jpg.pagespeed.ic.xRcSYL8gkM.webp"
-                                                        alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
-                                                        onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
-                                                    <span class=sale-tag>-50%</span>
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Headphones</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Wireless Headphones</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star"></i></li>
-                                                        <li><span>4.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$100.00</span>
-                                                        <span class=discount-price>$200.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-lazy-src="assets/images/products/xproduct-8.jpg.pagespeed.ic.M0YiTaaGYX.webp"
-                                                        alt="#" src="/pagespeed_static/1.JiBnMqyl6S.gif"
-                                                        onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Laptop</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Apple MacBook Air</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$899.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-
-                                            <div class=single-product>
-                                                <div class=product-image>
-                                                    <img data-pagespeed-high-res-src="assets/images/products/xproduct-2.jpg.pagespeed.ic.a9zQzFgLCS.webp"
-                                                        alt="#"
-                                                        src="data:image/webp;base64,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"
-                                                        onload="pagespeed.switchToHighResAndMaybeBeacon(this);"
-                                                        onerror="this.onerror=null;pagespeed.switchToHighResAndMaybeBeacon(this);">
-                                                    <span class=sale-tag>-25%</span>
-                                                    <div class=button>
-                                                        <a href=product-details.html class=btn><i
-                                                                class="lni lni-cart"></i> Add to Cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class=product-info>
-                                                    <span class=category>Speaker</span>
-                                                    <h4 class=title>
-                                                        <a href=product-grids.html>Bluetooth Speaker</a>
-                                                    </h4>
-                                                    <ul class=review>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><i class="lni lni-star-filled"></i></li>
-                                                        <li><span>5.0 Review(s)</span></li>
-                                                    </ul>
-                                                    <div class=price>
-                                                        <span>$275.00</span>
-                                                        <span class=discount-price>$300.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
                                     </div>
                                     <div class=row>
                                         <div class=col-12>

@@ -10,6 +10,7 @@ const multer = require('multer')
 const path = require('path')
 const { v4: uuidv4 } = require('uuid')
 const fs = require('fs')
+const slugify = require('slugify')
 
 const Product = require('../../models/product')
 const Brand = require('../../models/brand')
@@ -89,11 +90,15 @@ router.post('/save', upload.array('image'), compressMultipleImages, async(req,re
 
     try {
         
-        const {brandId} = req.body
+        const { name, brandId} = req.body
 
         const product = new Product(req.body)
         product.image = req.files[0].filename
         product.brandId = brandId
+        product.slug = slugify(name, {
+            strict: true,
+            lower: true
+        })
 
         const newProduct = await product.save()
 
@@ -142,6 +147,10 @@ router.post('/update', upload.array('image'), compressMultipleImages, async(req,
         product.price = price
         product.stock = stock
         product.description = description
+        product.slug = slugify(name, {
+            strict: true,
+            lower: true
+        })
 
         if(req.files){
             
