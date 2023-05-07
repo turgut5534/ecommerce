@@ -22,16 +22,14 @@ const Seller = sequelize.define('seller', {
         allowNull: false,
       },
       phone: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.STRING
       },
       address: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.STRING
       },
       is_active: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true,
+        defaultValue: false,
       },
   });
 
