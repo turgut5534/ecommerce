@@ -3,7 +3,6 @@ const router = new express.Router()
 
 //Middlewares
 const auth = require('../../middlewares/sellerAuth')
-const compressImage = require('../../middlewares/compressImage')
 const compressMultipleImages = require('../../middlewares/compressMultipleImages')
 
 const multer = require('multer')
@@ -16,6 +15,7 @@ const Product = require('../../models/product')
 const Brand = require('../../models/brand')
 const ProductSeller = require('../../models/productSeller')
 const ProductFile = require('../../models/productFiles')
+const ProductFeature = require('../../models/productFeature')
 
 const uploadDirectory = path.join(__dirname, '../../../uploads')
 
@@ -78,7 +78,11 @@ router.get('/edit/:id', async(req,res) => {
         const brands = await Brand.findAll()
         const product = await Product.findByPk(req.params.id)
 
-        res.render('seller/views/products/edit-product', {brands,product})
+        const productFeatures = await ProductFeature.findAll({
+            productId: product.id
+        })
+
+        res.render('seller/views/products/edit-product', {brands,product, productFeatures})
 
     } catch(e) {
         console.log(e)

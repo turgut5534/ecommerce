@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken')
 const auth = require('../middlewares/sellerAuth')
 
 const productRouter = require('./seller/product')
+const profileRouter = require('./seller/profile')
 
 router.get('/dashboard', auth, async(req,res) => {
 
@@ -143,5 +144,6 @@ router.get('/logout', (req,res) => {
 })
 
 router.use('/products', productRouter)
+router.use('/profile', profileRouter)
 
 module.exports = router

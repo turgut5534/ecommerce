@@ -27,6 +27,9 @@ const Seller = sequelize.define('seller', {
       address: {
         type: Sequelize.STRING
       },
+      logo: {
+        type: Sequelize.STRING,
+      },
       is_active: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,

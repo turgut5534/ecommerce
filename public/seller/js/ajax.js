@@ -130,3 +130,35 @@ $('body').on('click', '.delete-data', function(e) {
       })
     
 })
+
+$('.deactivate-account').on('click', function(e) {
+
+    e.preventDefault()
+
+    const input = $('.form-check-input')
+
+    if(!input.is(':checked')) {
+        return iziToast.error({
+            title: 'Error',
+            message: 'You must confirm account deactivation!'
+        })
+    }
+
+    const target = $(this).data('href')
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Are you sure you want to deacticate your account?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+            location.href = target
+        }
+      })
+
+})

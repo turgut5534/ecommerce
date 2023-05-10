@@ -41,6 +41,6 @@ Order.belongsTo(User)
 Cart.belongsTo(User)
 Review.belongsTo(User)
 
-sequelize.sync()
+// sequelize.sync()
 
 module.exports = User
